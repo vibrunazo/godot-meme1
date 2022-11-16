@@ -100,6 +100,8 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=7]
 resource_name = "4"
+length = 0.5
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("GridContainer/TextureRect4/LeSpit:visible")
 tracks/0/interp = 1
@@ -123,6 +125,18 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ ExtResource( 2 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("GridContainer/TextureRect4/LeSpit:material:shader_param/pos")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -210,6 +224,18 @@ tracks/6/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("GridContainer/TextureRect4/LeSpit:material:shader_param/pos")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -361,6 +387,8 @@ margin_left = -200.0
 margin_top = 35.0
 margin_right = 170.0
 margin_bottom = 317.0
+rect_scale = Vector2( 1.64, 1 )
+rect_pivot_offset = Vector2( 304, 138 )
 mouse_filter = 2
 texture = ExtResource( 3 )
 
