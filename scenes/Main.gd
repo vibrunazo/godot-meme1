@@ -13,6 +13,7 @@ func _on_Button1_pressed():
 func _on_Button2_pressed():
 	print('b2')
 	$AnimationPlayer.play("2")
+	$AnimMouth.play("talk")
 
 
 func _on_Button3_pressed():
