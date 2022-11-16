@@ -16,7 +16,7 @@ font_data = ExtResource( 4 )
 
 [sub_resource type="Theme" id=2]
 default_font = SubResource( 1 )
-Label/colors/font_color = Color( 0.941176, 0.929412, 0.101961, 1 )
+Label/colors/font_color = Color( 0.101961, 0.490196, 0.941176, 1 )
 Label/colors/font_color_shadow = Color( 0.105882, 0.00784314, 0.00784314, 0.603922 )
 Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 Label/constants/line_spacing = 3
@@ -54,6 +54,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("GridContainer/TextureRect2:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
 
 [sub_resource type="Animation" id=6]
 resource_name = "3"
@@ -83,6 +95,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("GridContainer/TextureRect4:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -135,6 +159,30 @@ tracks/3/keys = {
 "update": 0,
 "values": [ false ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("GridContainer/TextureRect2:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 3 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("GridContainer/TextureRect4:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ) ]
+}
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -175,7 +223,7 @@ percent_visible = 0.0
 margin_left = 374.0
 margin_right = 744.0
 margin_bottom = 282.0
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 
 [node name="Button2" type="Button" parent="GridContainer/TextureRect2"]
 anchor_right = 1.0
@@ -191,7 +239,7 @@ margin_left = -185.0
 margin_top = -134.0
 margin_right = 174.0
 margin_bottom = 97.0
-custom_colors/font_color = Color( 0.458824, 0.490196, 1, 1 )
+custom_colors/font_color = Color( 0.87451, 0.898039, 0.176471, 1 )
 text = "That's not any different from
 any other engine
  I've used!"
@@ -230,7 +278,7 @@ margin_left = 374.0
 margin_top = 286.0
 margin_right = 744.0
 margin_bottom = 568.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="Button4" type="Button" parent="GridContainer/TextureRect4"]
 anchor_right = 1.0
@@ -253,6 +301,21 @@ anims/2 = SubResource( 5 )
 anims/3 = SubResource( 6 )
 anims/4 = SubResource( 7 )
 anims/RESET = SubResource( 4 )
+
+[node name="LabelGodot" type="Label" parent="."]
+margin_left = 152.0
+margin_top = 253.0
+margin_right = 221.0
+margin_bottom = 299.0
+text = "Godot"
+
+[node name="LabelMe" type="Label" parent="."]
+margin_left = 523.0
+margin_top = 253.0
+margin_right = 592.0
+margin_bottom = 299.0
+custom_colors/font_color = Color( 0.87451, 0.898039, 0.176471, 1 )
+text = "Me"
 
 [connection signal="pressed" from="GridContainer/TextureRect1/Button1" to="." method="_on_Button1_pressed"]
 [connection signal="pressed" from="GridContainer/TextureRect2/Button2" to="." method="_on_Button2_pressed"]
