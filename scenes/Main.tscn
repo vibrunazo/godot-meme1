@@ -383,11 +383,11 @@ flat = true
 [node name="LeSpit" type="TextureRect" parent="GridContainer/TextureRect4"]
 visible = false
 material = ExtResource( 6 )
-margin_left = -200.0
-margin_top = 35.0
-margin_right = 170.0
-margin_bottom = 317.0
-rect_scale = Vector2( 1.64, 1 )
+margin_left = -267.0
+margin_top = 30.0
+margin_right = 103.0
+margin_bottom = 312.0
+rect_scale = Vector2( 1.22641, 1.02454 )
 rect_pivot_offset = Vector2( 304, 138 )
 mouse_filter = 2
 texture = ExtResource( 3 )
